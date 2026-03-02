@@ -407,12 +407,11 @@ export default function App() {
           border: "1px solid rgba(168,85,247,0.3)",
           borderRadius: 10,
           padding: "16px 24px",
-          boxShadow: "0 4px 8px rgba(168,85,247,0.18)",
+          boxShadow: "0 4px 8px rgba(108, 88, 128, 0.18)",
           display: "flex", alignItems: "center", gap: 16,
           animation: "bannerIn 0.25s ease",
           minWidth: 240,
         }}>
-          <span style={{ fontSize: 20 }}>⏰</span>
           <div style={{ flex: 1 }}>
             <p className="alarm-banner-time" style={{
               margin: 0, fontSize: 22, fontWeight: 500,
@@ -653,7 +652,7 @@ export default function App() {
                 value={inputNotes}
                 onChange={e => setInputNotes(e.target.value)}
                 rows={2}
-                placeholder="Add a note... (optional)"
+                placeholder="Add a note?"
                 style={{
                   width: "100%", background: "transparent", border: "none", outline: "none",
                   fontSize: 12, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
