@@ -41,7 +41,7 @@ function EditModal({ todo, onSave, onClose }) {
   const card = {
     background: "#fff", border: "1px solid #e5e5e5",
     borderRadius: 8, width: "100%", maxWidth: 480,
-    boxShadow: "0 8px 40px rgba(0,0,0,0.08)",
+    boxShadow: "0 4px 8px rgba(0,0,0,0.08)",
     animation: "modalIn 0.2s ease",
     overflow: "hidden",
   };
@@ -410,7 +410,7 @@ export default function App() {
           border: "1px solid rgba(168,85,247,0.3)",
           borderRadius: 10,
           padding: "16px 24px",
-          boxShadow: "0 8px 40px rgba(168,85,247,0.18)",
+          boxShadow: "0 4px 8px rgba(168,85,247,0.18)",
           display: "flex", alignItems: "center", gap: 16,
           animation: "bannerIn 0.25s ease",
           minWidth: 240,
