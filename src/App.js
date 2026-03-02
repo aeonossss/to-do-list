@@ -167,7 +167,6 @@ export default function App() {
 
   const [alarmHour, setAlarmHour] = useState(DEFAULT_ALARM_HOUR);
   const [alarmMinute, setAlarmMinute] = useState(DEFAULT_ALARM_MINUTE);
-  const [alarmSecond, setAlarmSecond] = useState(0);
   const [alarmEnabled, setAlarmEnabled] = useState(true);
   const [alarmEditingHour, setAlarmEditingHour] = useState(false);
   const [alarmEditingMin, setAlarmEditingMin] = useState(false);
