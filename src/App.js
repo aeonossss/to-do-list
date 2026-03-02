@@ -385,9 +385,6 @@ export default function App() {
   const today = clock.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
   const time = clock.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 
-  // Format alarm display
-  const alarmDisplay = `${String(alarmHour).padStart(2, "0")}:${String(alarmMinute).padStart(2, "0")}`;
-
   return (
     <div className="app-wrapper" style={{
       minHeight: "100vh",
@@ -732,8 +729,13 @@ export default function App() {
               placeholder="Search JN.."
               style={{
                 background: "transparent", border: "none", outline: "none",
-                borderBottom: `1px solid ${jobSearch ? "#A855F7" : "#9e9e9e"}`,
-                 borderBottom: `1px solid ${focused ? "#9e9e9e" : "#A855F7"}`,
+                borderBottom: `1px solid ${
+                    focused
+                    ? "#A855F7"
+                  : jobSearch
+                    ? "#A855F7"
+                    : "#9e9e9e"
+                }`,
                 fontSize: 12, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
                 color: "#1a1a1a", WebkitTextFillColor: "#b8b8b8",
                 fontWeight: 300, paddingBottom: 4, width: 88,
