@@ -181,6 +181,13 @@ export default function App() {
     setNotifPermission(await Notification.requestPermission());
   };
 
+  // AUTO-REQUEST NOTIFICATION PERMISSION ON MOUNT
+  useEffect(() => {
+    if (typeof Notification !== "undefined" && Notification.permission === "default") {
+      requestPermission();
+    }
+  }, []);
+
   useEffect(() => {
     try { localStorage.setItem("todos", JSON.stringify(todos)); } catch {}
   }, [todos]);
@@ -409,7 +416,7 @@ export default function App() {
 
             {/* Inline notes */}
             {input.trim() && (
-              <textarea value={inputNotes} onChange={e => setInputNotes(e.target.value)} rows={2} placeholder="Add a note... (optional)"
+              <textarea value={inputNotes} onChange={e => setInputNotes(e.target.value)} rows={2} placeholder="Add a note?"
                 style={{ width: "100%", background: "transparent", border: "none", outline: "none", fontSize: 12, fontFamily: F, color: "#999", fontWeight: 300, resize: "none", boxSizing: "border-box", lineHeight: 1.6 }} />
             )}
           </div>
