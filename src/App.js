@@ -361,14 +361,14 @@ export default function App() {
             <h1 className="header-title" style={{ margin: 0, fontSize: 28, fontWeight: 300, letterSpacing: -0.5, color: "#1a1a1a" }}>
               {pending > 0 ? `${pending} left to do` : "All done."}
             </h1>
-            <span className="header-clock" style={{ fontSize: 13, color: "#bbb", fontWeight: 300 }}>{time}</span>
+            <span className="header-clock" style={{ fontSize: 16, color: "#A855F7", fontWeight: 300 }}>{time}</span>
           </div>
         </div>
 
         {/* Input Area */}
         <div className="input-area" style={{ marginBottom: 32 }}>
           <div className="input-row" style={{
-            borderBottom: `1px solid ${focused ? "#1a1a1a" : "#e5e5e5"}`,
+            borderBottom: `1px solid ${focused ? "#7E78D2" : "#e5e5e5"}`,
             paddingBottom: 16, marginBottom: 16,
             transition: "border-color 0.2s",
             display: "flex", alignItems: "center", gap: 16,
@@ -406,7 +406,7 @@ export default function App() {
                 fontSize: 24, color: "#ccc", lineHeight: 1, padding: 0,
                 fontWeight: 100, transition: "color 0.15s",
               }}
-              onMouseOver={e => e.target.style.color = "#1a1a1a"}
+              onMouseOver={e => e.target.style.color = "#A855F7"}
               onMouseOut={e => e.target.style.color = "#ccc"}
             >+</button>
           </div>
@@ -457,7 +457,7 @@ export default function App() {
                 color: statusFilter === f ? "#1a1a1a" : "#bbb",
                 fontWeight: statusFilter === f ? 500 : 300,
                 padding: "0 0 4px", textTransform: "capitalize", transition: "color 0.15s",
-                borderBottom: statusFilter === f ? "1px solid #1a1a1a" : "1px solid transparent",
+                borderBottom: statusFilter === f ? "1px solid #A855F7" : "1px solid transparent",
               }}
             >
               {f}
@@ -548,7 +548,7 @@ export default function App() {
                     }}>#{todo.jobNumber}</span>
                   )}
                   {todo.reminder && (
-                    <span className="todo-reminder-date" style={{ fontSize: 11, color: "#bbb", letterSpacing: 0.3 }}>
+                    <span className="todo-reminder-date" style={{ fontSize: 11, color: "#A855F7", letterSpacing: 0.3 }}>
                       {new Date(todo.reminder + "T00:00:00").toLocaleDateString([], { month: "short", day: "numeric" })}
                     </span>
                   )}
@@ -566,8 +566,8 @@ export default function App() {
                   color: "#ddd", transition: "color 0.15s",
                   display: "flex", alignItems: "center",
                 }}
-                onMouseOver={e => e.currentTarget.style.color = "#999"}
-                onMouseOut={e => e.currentTarget.style.color = "#ddd"}
+                onMouseOver={e => e.currentTarget.style.color = "#A855F7"}
+                onMouseOut={e => e.currentTarget.style.color = "#adadad"}
               >
                 <svg className="todo-edit-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
